@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --color-surface: #07080c;
+  --color-surface-2: #0f1118;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-accent: #3ee7c6;
+  --color-accent-dim: rgba(62, 231, 198, 0.12);
+  --color-muted: #8b92a5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--color-surface)] text-zinc-100 antialiased;
+    font-family: var(--font-body);
+  }
+
+  ::selection {
+    @apply bg-teal-400/30 text-white;
+  }
+}
